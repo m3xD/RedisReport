@@ -39,7 +39,15 @@
 ```
   ZRANGE <id> -inf +inf BYSCORE [WITHSCORES (include thêm score)] [(REV) reversed sort] [(LIMIT) (offset) (numOfElemnt)]
 ```
-## 5. Hyperloglog
+## 5. Hyperloglog: đếm số lượng phần tử duy nhất được thêm vào hyperloglog với dung lượng thấp và tính chính xác tương đối.
+### PFADD: thêm một phần tử.
+```
+  PFADD <id> <value>
+```
+### PFCOUNT: Đếm số lượng phần tử có trong id
+```
+  PFCOUNT <id>
+```
 
 ## 6. List
 ### LPUSH: Thêm 1 phần tử vào đầu của list.
