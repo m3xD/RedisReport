@@ -5,6 +5,52 @@
 ## 2. Hash
 
 ## 3. Set
+- Các dữ liệu trong set là duy nhất.
+- Có thể thực hiện các phép toán của set như union, intersection, difference.
+### SADD: Thêm 1 phần tử vào set.
+```
+  SADD <id> <value>
+```
+### SMEMBERS: Trả về tất cả phần tử có trong set.
+```
+  SMEMBER <id>
+```
+### SUNION: Trả về kết quả của phép hợp giữa các set khác nhau.
+```
+  SUNION [(các_set)]
+```
+### SINTER: Trả về kết quả của phép giao giữa các set khác nhau.
+```
+  SINTER [(các_set)]
+```
+### SDIFF: Trả về kết quả của phép trừ giữa các set khác nhau (các phần tử tồn tại ở set_1 nhưng kh tồn tại ở các set còn lại).
+```
+  SDIFF [(các_set)]
+```
+### SINTERSTORE: Lưu kết quả của các phép tập hợp.
+```
+  SINTERSTORE <cur_set> [các_set]
+```
+### SISMEMBER: Trả về 1 nếu phần tử có trong set và ngược lại
+```
+  SISMEMBER <id> <value>
+```
+### SMISMEMBER: Giống SISMEMBER nhưng kiểm tra nhiều phần tử trong 1 request;
+```
+  SMISMEMBER <id> [multiple_val]
+```
+### SCARD: Trả về SL phần tử có trong set.
+```
+  SCARD <id>
+```
+### SREM: Xóa phần tử có trong set.
+```
+  SREM <id> <val>
+```
+### SSCAN: Duyệt qua các phần tử với offset cho trước
+```
+  SSCAN <id> <offset> (option LIMIT <số_PT>)
+```
 
 ## 4. Sorted Set
 - Sorted set là sự kết hợp của 2 datastructure khác là set và hash.
