@@ -1,6 +1,36 @@
 # Redis
 
-## 1. Record
+## 1. String
+- Dữ liệu được truy vấn theo id và trả về kết quả là 1 string
+### SET: Định nghĩa id có val là string.
+```
+  SET <id> <val> (các tham số tùy chọn)
+```
+- Một số tham số tùy chọn thêm:
+  * XX: Gán với id nếu id đó đã được định nghĩa.
+  * NX: Gán với id nếu id đó chưa được định nghĩa.
+  * EX: Xóa record sau khoảng thời gian định nghĩa.
+### GET: Truy vấn dữ liệu dựa theo id
+```
+  GET <id>
+```
+### MGET/MSET: Giống với GET/SET nhưng có thể GET/SET multiple value
+### DEL: Để xóa cặp id-string đã được định nghĩa:
+```
+  DEL <id>
+```
+### GETRANGE: lấy ra substring dựa theo khoảng được định nghĩa trước
+```
+  GETRANGE <id> <lower_bound> <upper_bound>
+```
+### SETRANGE: thay đổi substring theo một khoảng được định nghĩa trước
+```
+  SETRANGE <id> <lower_bound> <val>
+```
+### INCR/DECR/INCRBY/DECRBY/INCRBYFLOAT: Tăng/giảm giá trị của val 1 hoặc số lượng tùy ý:
+```
+  INCR/DECR/INCRBY/DECRBY/INCRBYFLOAT <id> [(INCRBY/DECRBY/INCRBYFLOAT) số lượng]
+```
 
 ## 2. Hash
 - Lưu trữ dữ liệu dưới dạng (key - value)
