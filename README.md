@@ -1,5 +1,10 @@
 # Redis
 
+## Overview:
+- Redis là một database, cache, message broker,...
+- Được cấu hình sẵn nhiều cấu trúc dữ liệu khác nhay để phục vụ các mục đích khác nhau như bảo vệ dữ liệu dựa trên các transactions, replication,...
+- Performance của redis là rất tốt do được lưu trữ in-memory (RAM) có tốc độ truy xuất rất nhanh.
+
 ## 1. String
 - Dữ liệu được truy vấn theo id và trả về kết quả là 1 string
 ### SET: Định nghĩa id có val là string.
