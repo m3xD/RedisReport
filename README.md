@@ -3,6 +3,47 @@
 ## 1. Record
 
 ## 2. Hash
+- Lưu trữ dữ liệu dưới dạng (key - value)
+### HSET: thêm hoặc cập nhật dữ liệu có trong hash.
+```
+  HSET <id> [(Các cặp key-value)]
+```
+### HGET: trả về value dựa trên key
+```
+  HGET <id> <key>
+```
+### HGETALL: trả về tất cả các cặp key-val
+```
+  HGETALL <id>
+```
+### HEXISTS: Kiểm tra xem key đã tồn tại trong hash chưa.
+```
+  HEXISTS <id> <key>
+```
+### DEL: Xóa toàn bộ key-value có trong hash
+```
+  DEL <id>
+```
+### HDEL: Xóa MỘT cặp key-value
+```
+  HDEL <id> <key>
+```
+### HINCRBY/HINCRBYFLOAT: Tăng/giảm một lượng với các value(int/float) có kiểu dữ liệu là int, float
+```
+  HINCRBY/HINCRBYFLOAT <id> <key> <x>
+```
+### HSTRLEN: Trả về độ dài string của value.
+```
+  HSTRLEN <id> <key>
+```
+### HKEYS: Liệt kê các key được định nghĩa trong hash
+```
+  HKEYS <id>
+```
+### HVALS: Liệt kê các value được định nghĩa trong hash
+```
+  HVALS <id>
+```
 
 ## 3. Set
 - Các dữ liệu trong set là duy nhất.
